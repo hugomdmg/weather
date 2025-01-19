@@ -6,7 +6,7 @@ to run the app -> npm run install -> npm run start
 # API
 
 Framework -> Flask (python)
-to run the api -> "python3" "server.py" (you will need the dependencies installed, check requirments.txt)
+to run the api -> python3 server.py (you will need the dependencies installed, check requirments.txt)
 needs the envirnment variable -> file .env -> APP_URL = http://localhost:4200
 
 # BUILD ALL THE PROJECT
