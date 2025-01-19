@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  api:
+    build: ./API
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./API:/API
+    container_name: API_weather
+    networks:
+      - mynetwork
+  app:
+    build: ./APP
+    ports:
+      - 4200:4200
+    volumes:
+      - ./APP:/APP
+      - /APP/node_modules
+    depends_on:
+      - api
+    container_name: APP_weather
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge

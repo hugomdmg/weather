@@ -1,0 +1,52 @@
+<table>
+    <tbody>
+        <tr *ngIf="dataFromParent.temperature">
+            <td>
+                <img src="ubi.png" />
+                {{dataFromParent.city}}
+            </td>
+            <td>
+                <img src="temp.png" />
+                {{dataFromParent.temperature}}
+            </td>
+            <td>
+                <img src="hum.png" />
+                {{dataFromParent.humidity}} %
+            </td>
+            <td>
+                <img src="sunrise.png" />
+                {{dataFromParent.sunrise}}
+            </td>
+            <td>
+                <img src="sunset.png" />
+                {{dataFromParent.sunset}}
+            </td>
+        </tr>
+        <tr *ngIf="dataFromParent.temperature">
+            <td>
+                <img *ngIf="dataFromParent.weather_description == 'overcast clouds'" src="cloudy.png" />
+                <img *ngIf="dataFromParent.weather_description == 'clear sky'" src="sunny.png" />
+                <img *ngIf="dataFromParent.weather_description == 'rain' || dataFromParent.weather_description == 'light rain'" src="rain.png" />
+                <img *ngIf="dataFromParent.weather_description == 'few clouds' || dataFromParent.weather_description == 'broken clouds' || dataFromParent.weather_description == 'scattered clouds'" src="parcloudy.png" />
+                <img *ngIf="dataFromParent.weather_description == 'snow' || dataFromParent.weather_description == 'light snow'" src="snow.png" />
+                {{dataFromParent.weather_description}}
+            </td>
+            <td>
+                <img src="pressure.png" />
+                {{dataFromParent.pressure}} hPa
+            </td>
+            <td>
+                <img src="deg.png" />
+                {{dataFromParent.wind.deg}}º
+            </td>
+            <td>
+                <img src="speed.png" />
+                {{dataFromParent.wind.speed}} m/s
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </tbody>
+</table>

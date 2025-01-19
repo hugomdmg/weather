@@ -1,0 +1,15 @@
+<div class="search-container">
+    <p>Search location: </p>
+    <input type="text" #locationInput placeholder="Enter location name" />
+    <button (click)="searchLocation(locationInput.value)">Search</button>
+</div>
+
+<app-data-visualice [dataFromParent]="data"></app-data-visualice>
+
+<div>
+    <div id="map" style="height: 500px; width: 100%;"></div>
+</div>
+<p id="coord-info">
+    <span>Latitude: {{ currentLat }}</span>,
+    <span>Longitude: {{ currentLon }}</span>
+</p>

@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "build": "docker-compose build",
+        "start": "docker-compose up",
+        "down": "docker-compose down"
+    },
+    "dependencies": {
+        "leaflet": "^1.9.4"
+    }
+}
