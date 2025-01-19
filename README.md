@@ -1,3 +1,7 @@
+# WEB SITE
+
+link to the deployment -> https://weather-app-theta-green.vercel.app/
+
 # APP
 
 Framework -> angular (typescript)
